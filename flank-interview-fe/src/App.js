@@ -1,9 +1,11 @@
-import { useState } from 'react';
+// src/App.js
+import React, { useState } from 'react';
 import './app.scss';
 import ThinTemplate from './templates/ThinTemplate/thin-template';
 import ReactMarkdown from 'react-markdown';
 import objective from './objective.js';
 import rehypeRaw from 'rehype-raw';
+import FilterSelection from './FilterSelection';
 
 const options = [
     { value: null, label: 'All' },
@@ -19,23 +21,14 @@ function App() {
 
     return (
         <ThinTemplate instructionTitle="Front-end Interview">
-            <div class='options'>
-                {options.map((option) => (
-                    <button
-                        type='button'
-                        key={option.value}
-                    >
-                        {option.label}
-                    </button>
-                ))}
-            </div>
-
+            <FilterSelection options={options} selected={selected} setSelected={setSelected} />
+            
             <ReactMarkdown rehypePlugins={[rehypeRaw]} className='markdown' children={objective} />
 
             <h2>Selected State</h2>
-            <pre>
-                {JSON.stringify(selected, null, 2)}
-            </pre>
+            <span>
+                {JSON.stringify(selected.map(item => item.label), null, 2)}
+            </span>
         </ThinTemplate>
     );
 }

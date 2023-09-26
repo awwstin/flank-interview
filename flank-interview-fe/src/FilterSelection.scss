@@ -3,16 +3,16 @@
     background-color: transparent;
     color: #000;
     border: 1px solid #000;
-    font-size: 12px; /* Adjusted font size */
-    font-weight: bold; /* Bold font */
-    width: 65px;  /* Explicit width */
-    height: 40px;  /* Explicit height */
-    padding: 10px; /* Padding to ensure text is centered */
+    font-size: 12px; 
+    font-weight: bold; 
+    width: 65px;  
+    height: 40px;  
+    padding: 10px; 
     transition: border 0.3s ease;
 }
 
 .options button:hover {
-    border: 1px solid #000;  /* Ensure border remains on hover */
+    border: 1px solid #000;  
 }
 
 .options button.selected {
@@ -20,13 +20,13 @@
     background-color: #008CBA;
     color: #fff;
     border: 1px solid #000;
-    font-size: 12px; /* Adjusted font size */
-    font-weight: bold; /* Bold font */
-    width: 65px;  /* Explicit width */
-    height: 40px;  /* Explicit height */
-    padding: 10px; /* Padding to ensure text is centered */
+    font-size: 12px; 
+    font-weight: bold; 
+    width: 65px;  
+    height: 40px;  
+    padding: 10px; 
 }
 
 .options button.selected:hover {
-    border: 1px solid #008CBA;  /* Ensure border remains on hover for selected buttons */
+    border: 1px solid #008CBA;  
 }
